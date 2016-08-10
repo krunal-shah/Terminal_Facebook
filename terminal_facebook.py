@@ -40,7 +40,7 @@ while True:
 	driver.get("https://www.facebook.com")
 	page = driver.page_source
 	soup = BeautifulSoup(page,"html.parser")
-	num = soup.find('span',id='js_1').contents[0].string
+	num = soup.find('span',id='mercurymessagesCountValue').string
 	print ""
 	if num != 0:
 		print "You have unread messages from %s conversations!"%(num)
